@@ -20,8 +20,6 @@ export default class LoginController extends Controller {
         this.username,
         this.password,
       );
-      // console.log('Authentication successful:', this.session.data.authenticated);
-      console.log('Token is ', this.session.data.authenticated.token);
     } catch (error) {
       this.error = error;
     }

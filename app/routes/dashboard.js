@@ -5,7 +5,6 @@ export default class DashboardRoute extends Route {
   @service session;
 
   beforeModel(transition) {
-    // this.session.setup();
     this.session.requireAuthentication(transition, 'login');
   }
 }

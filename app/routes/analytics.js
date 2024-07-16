@@ -14,7 +14,7 @@ export default class AnalyticsRoute extends Route {
     try {
       return this.store.findRecord('analytics', 1);
     } catch (error) {
-      console.log(error);
+      //
     }
   }
 }

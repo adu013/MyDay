@@ -5,7 +5,6 @@ export default class IndexRoute extends Route {
   @service session;
 
   beforeModel() {
-    // this.session.setup();
     this.session.prohibitAuthentication('dashboard');
   }
 }

@@ -6,7 +6,7 @@ export default Base.extend({
     if (token) {
       return data;
     } else {
-      console.log('Error in cookie');
+      throw 'No valid session data'
     }
   },
 

@@ -1,11 +1,10 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
-export default class IndexRoute extends Route {
+export default class ApplicationRoute extends Route {
   @service session;
 
   beforeModel() {
-    // this.session.setup();
-    this.session.prohibitAuthentication('dashboard');
+    this.session.setup();
   }
 }

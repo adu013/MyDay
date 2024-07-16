@@ -1,2 +1,33 @@
 {{page-title "Login"}}
-{{outlet}}
+
+<div class="div-login">
+  <form class="form-login" {{on 'submit' this.login}}>
+    <h2 style="color: purple;">Login</h2>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        placeholder="Enter username"
+        {{on 'change' (fn this.updateField "username")}}
+      >
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="Enter password"
+        {{on 'change' (fn this.updateField "password")}}
+      >
+    </div>
+    <button type="submit" class="btn btn-primary btn-login">Login</button>
+
+    {{#if this.error}}
+      <p><strong>{{this.error}}</strong></p>
+    {{/if}}
+  </form>
+
+</div>

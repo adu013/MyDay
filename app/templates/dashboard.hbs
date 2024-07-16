@@ -1,2 +1,23 @@
 {{page-title "Dashboard"}}
-{{outlet}}
+
+<LinkTo @route="analytics">Analytics</LinkTo>
+
+<Logout />
+
+<div class="question">
+  <p>How is your day?</p>
+</div>
+
+<div class="face-container">
+  <button class="btn-smiley" type="button" title="Today, I'm sad" {{on 'click' this.markSad}}>
+    <img src="/images/frowning-face.svg" alt="Sad" width="250" height="250">
+  </button>
+
+  <button class="btn-smiley" type="button" title="Today is a neutal day" {{on 'click' this.markNeutral}}>
+    <img src="/images/neutral-face.svg" alt="Neutral" width="250" height="250">
+  </button>
+
+  <button class="btn-smiley" type="button" title="Today, I'm very happy" {{on 'click' this.markHappy}}>
+    <img src="/images/smiling-face.svg" alt="Happy" width="250" height="250">
+  </button>
+</div>

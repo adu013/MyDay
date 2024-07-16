@@ -19,7 +19,8 @@ body {
   margin: 0 3rem;
 }
 
-.login-redirect, .login-redirect a {
+.login-redirect,
+.login-redirect a {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
@@ -34,4 +35,41 @@ body {
   justify-content: center;
   color: grey;
   font-size: medium;
+}
+
+.div-login {
+  display: flex;
+  justify-content: center;
+}
+
+.form-login {
+  width: 40%;
+}
+
+.btn-login {
+  margin-top: 10px;
+  background-color: purple;
+}
+
+.div-logout {
+  position: fixed;
+  right: 10px;
+  top: 5px;
+}
+
+.btn-logout {
+  background-color: purple;
+}
+
+.btn-logout:hover {
+  background-color: rgb(73 1 73);
+}
+
+.btn-smiley {
+  background: none;
+  border: none;
+}
+
+.btn-smiley:hover {
+  background-color: purple;
 }

@@ -1,0 +1,33 @@
+{{page-title "Analytics"}}
+
+<div>
+  <Logout />
+
+  <LinkTo @route="dashboard">Back to Dashboard</LinkTo>
+
+  <section>
+    <section>
+      <h1>This month</h1>
+      <div>
+        Your happy days:
+        {{this.model.this_month_happy_days}} day(s) out of {{this.model.this_month_total_days}} days(s)
+      </div>
+      <div>
+        Your normal days:
+        {{this.model.this_month_neutral_days}} day(s) out of {{this.model.this_month_total_days}} days(s)
+      </div>
+    </section>
+    <hr />
+    <section>
+      <h1>This year</h1>
+      <div>
+        Your happy days:
+        {{this.model.this_year_happy_days}} day(s) out of {{this.model.this_month_total_days}} days(s)
+      </div>
+      <div>
+        Your normal days:
+        {{this.model.this_year_neutral_days}} day(s) out of {{this.model.this_month_total_days}} days(s)
+      </div>
+    </section>
+  </section>
+</div>

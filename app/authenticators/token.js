@@ -1,14 +1,15 @@
 import Base from 'ember-simple-auth/authenticators/base';
 
-export default Base.extend({
+export default class CustomAutheticator extends Base {
   async restore(data) {
+    console.log('Restore method called');
     let { token } = data;
     if (token) {
       return data;
     } else {
-      throw 'No valid session data'
+      throw 'No valid session data';
     }
-  },
+  }
 
   async authenticate(username, password) {
     let response = await fetch('http://localhost:8000/api/v1/auth/login/', {
@@ -28,8 +29,7 @@ export default Base.extend({
       let error = await response.text();
       throw new Error(error);
     }
-  },
+  }
 
-  async invalidate() {
-  },
-});
+  async invalidate() {}
+}

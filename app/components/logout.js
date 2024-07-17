@@ -10,10 +10,10 @@ export default class LogoutComponent extends Component {
     let response = await fetch('http://localhost:8000/api/v1/auth/logout/', {
       method: 'POST',
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': 'Token ' + this.session.data.authenticated.token
-      }
+        Authorization: 'Token ' + this.session.data.authenticated.token,
+      },
     });
 
     if (response.ok) {

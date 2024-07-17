@@ -6,7 +6,6 @@ export default class AnalyticsRoute extends Route {
   @service store;
 
   beforeModel(transition) {
-    this.session.setup();
     this.session.requireAuthentication(transition, 'login');
   }
 

@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 
 export default class ApplicationAdapter extends JSONAPIAdapter {
-  host = 'http://localhost:8000';
+  host = 'http://traxrep.com';
   namespace = 'api/v1/myday';
 
   @service session;

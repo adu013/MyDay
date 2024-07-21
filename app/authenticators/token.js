@@ -2,7 +2,6 @@ import Base from 'ember-simple-auth/authenticators/base';
 
 export default class CustomAutheticator extends Base {
   async restore(data) {
-    console.log('Restore method called');
     let { token } = data;
     if (token) {
       return data;

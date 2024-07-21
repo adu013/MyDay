@@ -4,20 +4,26 @@
 
 <Logout />
 
+{{#if this.model.mood}}
+<div class="question">
+  <p>I'm feeling {{this.model.mood}} today</p>
+</div>
+{{else}}
 <div class="question">
   <p>How is your day?</p>
 </div>
 
 <div class="face-container">
-  <button class="btn-smiley" type="button" title="Today, I'm sad" {{on 'click' this.markSad}}>
+  <button class="btn-smiley" type="button" title="Today, I'm sad" {{on 'click' (fn this.createActivity 30)}}>
     <img src="/images/frowning-face.svg" alt="Sad" width="250" height="250">
   </button>
 
-  <button class="btn-smiley" type="button" title="Today is a neutal day" {{on 'click' this.markNeutral}}>
+  <button class="btn-smiley" type="button" title="Today is a neutal day" {{on 'click' (fn this.createActivity 20)}}>
     <img src="/images/neutral-face.svg" alt="Neutral" width="250" height="250">
   </button>
 
-  <button class="btn-smiley" type="button" title="Today, I'm very happy" {{on 'click' this.markHappy}}>
+  <button class="btn-smiley" type="button" title="Today, I'm very happy" {{on 'click' (fn this.createActivity 10)}}>
     <img src="/images/smiling-face.svg" alt="Happy" width="250" height="250">
   </button>
 </div>
+{{/if}}
